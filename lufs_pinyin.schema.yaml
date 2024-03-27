@@ -10,7 +10,6 @@ schema:
     - Modified by Lufs_X <i@isteed.cc>
   description: |
     Rime 预设的拼音输入方案。
-    稍稍的改了一下（小声
 
 switches:
   - name: ascii_mode # 未启用 ascii_composer 时，该项无意义
