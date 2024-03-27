@@ -10,7 +10,7 @@ config_version: "2023-12-30"
 # last：上次使用的拉丁字母键盘布局
 # default：美国（ABC）键盘布局
 # _custom_：键盘布局，例如 'com.apple.keylayout.USExtended' 或简写的 'USExtended'
-keyboard_layout: last
+keyboard_layout: default
 
 # 给打字贼快的家伙们设置的按键持续时间（
 chord_duration: 0.1 # seconds
@@ -22,11 +22,9 @@ show_notifications_via_notification_center: true
 app_options: {} # 清除应用默认输入法，防止无法输入中文（建议通过 Caps 切换中英文）
 
 style:
-  color_scheme: mint_light_blue # 主题方案
+  color_scheme: wechat # 主题方案
   color_scheme_dark: reimu_dark # 指定深色模式时输入法所使用的主题方案
   translucency: true # 背景半透明总开关，不需要关掉即可
-
-  # 以下为鼠须管默认设置
   text_orientation: horizontal # horizontal | vertical
   # 展示分页
   show_paging : true
@@ -37,29 +35,27 @@ style:
   corner_radius: 10
   # 色彩空间： srgb | display_p3
   color_space: srgb
-  
   # 选中框 圆角半径
   hilited_corner_radius: 0
   
+  # 在非内嵌(inline_preedit)模式下，预编辑和候选词之间的空间
+  spacing: 10
+  # base_offset: 6 # 竖排文字的基线调整
   # 窗口边界高度，大于圆角半径才生效
   border_height: 0
   # 窗口边界宽度，大于圆角半径才生效
   border_width: 0
+   # 内嵌预编辑
+  inline_preedit: false
+  inline_candidate: false
   # 预编辑和候选词的行长度(如果值>0则固定,否则为灵活/自动调整)。
   line_length: 0
   # 在堆叠(stacked)布局中,候选词之间的空间
   line_spacing: 5
-  # 在非内嵌(inline_preedit)模式下，预编辑和候选词之间的空间
-  spacing: 10
-  
-  # 内嵌预编辑
-  inline_preedit: true
-  inline_candidate: false
-  # base_offset: 6 # 竖排文字的基线调整
   # 候选词格式
-  # candidate_format: '%c. %@'
+  candidate_format: '%c. %@'
   candidate_list_layout: linear  # stacked | linear
- # 全局字体及大小
+  # 全局字体及大小
   font_face: 'PingFang SC'
   font_point: 16
   # 序号字体及大小（建议使用「等宽字体」）
@@ -311,56 +307,34 @@ preset_color_schemes:
   wechat:
     name: "微信输入法"
     author: "Lufs X <i@isteed.cc>"
-
-    font_face: "PingFangSC-Regular"
-    font_point: 15
-    label_font_face: "PingFangSC-Regular"
-    label_font_point: 12
-    comment_font_face: "PingFangSC-Regular"
-    comment_font_point: 12
-
-    candidate_format: "%c\u2005%@"
     candidate_list_layout: linear
     text_orientation: horizontal
     inline_preedit: true
-
     corner_radius: 7
     hilited_corner_radius: 7
     border_height: -2
-
     color_space: display_p3
+    text_color: 0xFFFFFF
     back_color: 0xFFFFFF
+    label_color: 0x888785
     border_color: 0xFFFFFF
     candidate_text_color: 0x444444
     comment_text_color: 0x8E8E8E
-    label_color: 0x888785
     hilited_candidate_back_color: 0x7BAE4F
     hilited_candidate_text_color: 0xFFFFFF
     hilited_comment_text_color: 0xF0F0F0
     hilited_candidate_label_color: 0xFFFFFF
-    text_color: 0xFFFFFF
     hilited_text_color: 0xD8000000
 
   wechat_dark:
     name: "微信输入法(暗色)"
     author: "Lufs X <i@isteed.cc>"
-
-    font_face: "PingFangSC-Regular"
-    font_point: 15
-    label_font_face: "PingFangSC-Regular"
-    label_font_point: 12
-    comment_font_face: "PingFangSC-Regular"
-    comment_font_point: 12
-
-    candidate_format: "%c\u2005%@"
     candidate_list_layout: linear
     text_orientation: horizontal
     inline_preedit: true
-
     corner_radius: 7
     hilited_corner_radius: 7
     border_height: -2
-
     color_space: display_p3
     back_color: 0x151515
     border_color: 0x151515

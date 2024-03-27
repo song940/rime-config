@@ -3,7 +3,7 @@
 # source: https://pinyin.sogou.com/dict/detail/index/4
 
 ---
-name: net
+name: sogou_net
 version: "2024-02-07"
 sort: by_weight
 ...

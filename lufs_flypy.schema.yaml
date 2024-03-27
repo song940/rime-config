@@ -157,11 +157,8 @@ translator:
   contextual_suggestions: true
   max_homophones: 7
 
-grammar:
-  language: zh-hans-t-essay-bgw
-
 punctuator:
-  import_preset: lufs_symbols
+  import_preset: default
 
 key_binder:
   import_preset: default

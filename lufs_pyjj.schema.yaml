@@ -19,7 +19,7 @@ switches:
   - name: ascii_punct
     states: [。，, ．，]
   - name: traditionalization
-    # reset: 0 # 默认状态: 0 简体 1 繁体
+    reset: 0 # 默认状态: 0 简体 1 繁体
     states: [简, 繁]
   - name: emoji_suggestion
     # reset: 1 # 默认状态: 0 关闭 1 开启
@@ -154,11 +154,8 @@ translator:
   contextual_suggestions: true
   max_homophones: 7
 
-grammar:
-  language: zh-hans-t-essay-bgw
-
 punctuator:
-  import_preset: lufs_symbols
+  import_preset: default
 
 key_binder:
   import_preset: default

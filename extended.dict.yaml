@@ -14,7 +14,7 @@ import_tables:
   - dicts/thuocl_IT # IT
   - dicts/thuocl_medical # 医学
   - dicts/thuocl_renmingdiming # 人名地名
-  - dicts/simp-ext # 原字表中除单字外部分
+  - dicts/android_pinyin # 原字表中除单字外部分
   - dicts/sogou_net # 网络流行语
   - dicts/emoji # emoji 中的词库
 ...
